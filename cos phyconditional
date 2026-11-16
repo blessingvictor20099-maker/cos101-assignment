@@ -1,0 +1,70 @@
+
+def speed():
+    distance = float(input("Enter distance (m): "))
+    time = float(input("Enter time (s): "))
+    result = distance / time
+    print("Speed =", result, "m/s")
+
+
+def force():
+    mass = float(input("Enter mass (kg): "))
+    acceleration = float(input("Enter acceleration (m/s2): "))
+    result = mass * acceleration
+    print("Force =", result, "N")
+
+
+def acceleration():
+    final_velocity = float(input("Enter final velocity (m/s): "))
+    initial_velocity = float(input("Enter initial velocity (m/s): "))
+    time = float(input("Enter time (s): "))
+    result = (final_velocity - initial_velocity) / time
+    print("Acceleration =", result, "m/s2")
+
+
+def work_done():
+    force_value = float(input("Enter force (N): "))
+    distance = float(input("Enter distance (m): "))
+    result = force_value * distance
+    print("Work done =", result, "J")
+
+
+def density():
+    mass = float(input("Enter mass (kg): "))
+    volume = float(input("Enter volume (m3): "))
+    result = mass / volume
+    print("Density =", result, "kg/m3")
+
+
+while True:
+    print("\n===== PHYSICS CALCULATOR =====")
+    print("1. Calculate Speed")
+    print("2. Calculate Force")
+    print("3. Calculate Acceleration")
+    print("4. Calculate Work Done")
+    print("5. Calculate Density")
+
+    choice = input("Choose a Physics operation (1-5): ")
+
+    if choice == "1":
+        speed()
+
+    elif choice == "2":
+        force()
+
+    elif choice == "3":
+        acceleration()
+
+    elif choice == "4":
+        work_done()
+
+    elif choice == "5":
+        density()
+
+    else:
+        print("Invalid choice!")
+
+    again = input("\nDo you want to perform another calculation? (yes/no): ")
+
+    if again.lower() != "yes":
+        print("Thank you for using the Physics Calculator!")
+        break
